@@ -1,6 +1,11 @@
 #! /bin/sh
 
-echo "printout user name: " $USER
+if [ $# != 2 ]
+then
+    echo "You must put two parameters"
+    exit 1
+fi
+
 first_val=$1
 second_val=$2
 if [ $first_val -lt 1 ] || [ $second_val -lt 1 ]
